@@ -360,6 +360,10 @@ footer img{
         margin-left: 85px;
         width: 50%;
     }
+    .col2,.col3{
+        margin: 15px;
+        display: inline-block;
+    }
 
 }
 
