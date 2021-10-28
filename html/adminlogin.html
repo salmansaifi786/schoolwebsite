@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="head"><h1>Admin Portal</h1></div>
+            <div class="form">
+                <form  onsubmit="return validate()" action="data.html" class="login">
+                    <div class="username log">
+                        <input type="email" name="username" id="admin" placeholder="username" required>
+                    </div>
+                    <label id="invalid" style="color:red;visibility:hidden;">Invalid username</label>
+                    <div class="pass log"><input id="pass" type="password" placeholder="password" required></div>
+                    <label id="invalid-pass" style="color:red;visibility:hidden;">wrong password</label>
+                    <div class="button"><input type="submit" value="login"></div>
+                </form>
+                <div class="link"><a href="##" target="_blank">Forgot password?</a></div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

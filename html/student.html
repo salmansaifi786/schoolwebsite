@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form</title>
+      <link rel="stylesheet" href="../css/student.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Student Log in
+            </div>
+            <div class="title signup">
+               Sign Up
+            </div>
+         </div>
+         <!-- Login form-->
+          <!-- Login form-->
+           <!-- Login form-->
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+            <div class="form-inner">
+               <form onsubmit="return validate()" action="studentdata.html" class="login">
+                  <div class="field">
+                     <input  id="user" type="email" placeholder="Email Address" required>
+                     <label id="invalid" style="color:red; visibility:hidden;">Enter correct mail</label>
+                  </div>
+                  <div class="field">
+                     <input id="psw" type="password" placeholder="Password" required>
+                     <label id="pass-invalid" style="color:red; visibility:hidden;">Enter correct password</label>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input  type="submit" value="Login">
+                  </div>
+                  <div class="pass-link">
+                     <a href="#">Forgot password?</a>
+                  </div>
+                  <div class="signup-link">
+                     create account? <a href="">Signup now</a>
+                  </div>
+               </form>
+                <!-- sign uo form-->
+                 <!-- sign up form-->
+                  <!-- sign up form-->
+               <form action="#" class="signup">
+                  <div class="field">
+                     <input type="email" id="user" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" id="psw1" placeholder="Password" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" id="psw2" placeholder="Confirm password" required>
+                  </div>
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" onclick="fun1()" value="Signup">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
+      <script src="../js/student.js"></script>
+   </body>
+</html>
